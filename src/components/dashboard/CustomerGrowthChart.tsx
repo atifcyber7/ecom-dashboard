@@ -7,30 +7,46 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { Button } from "@/components/ui/button";
+import { UserPlus } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 
 const data = [
-  { name: "Jan", customers: 120 },
-  { name: "Feb", customers: 145 },
-  { name: "Mar", customers: 178 },
-  { name: "Apr", customers: 210 },
-  { name: "May", customers: 256 },
-  { name: "Jun", customers: 298 },
-  { name: "Jul", customers: 342 },
-  { name: "Aug", customers: 395 },
-  { name: "Sep", customers: 458 },
-  { name: "Oct", customers: 512 },
-  { name: "Nov", customers: 589 },
-  { name: "Dec", customers: 678 },
+  { name: "Jan", customers: 120, newSignups: 45 },
+  { name: "Feb", customers: 165, newSignups: 52 },
+  { name: "Mar", customers: 217, newSignups: 68 },
+  { name: "Apr", customers: 285, newSignups: 74 },
+  { name: "May", customers: 359, newSignups: 82 },
+  { name: "Jun", customers: 441, newSignups: 91 },
+  { name: "Jul", customers: 532, newSignups: 98 },
+  { name: "Aug", customers: 630, newSignups: 112 },
+  { name: "Sep", customers: 742, newSignups: 125 },
+  { name: "Oct", customers: 867, newSignups: 138 },
+  { name: "Nov", customers: 1005, newSignups: 156 },
+  { name: "Dec", customers: 1161, newSignups: 178 },
 ];
 
 export function CustomerGrowthChart() {
+  const handleAddCustomer = () => {
+    toast({
+      title: "Add Customer",
+      description: "Opening new customer form...",
+    });
+  };
+
   return (
     <div className="bg-card rounded-xl p-6 shadow-card border border-border/50 animate-fade-in">
-      <div className="mb-6">
-        <h3 className="text-lg font-semibold text-foreground">Customer Growth</h3>
-        <p className="text-sm text-muted-foreground">New customers over time</p>
+      <div className="mb-6 flex items-start justify-between">
+        <div>
+          <h3 className="text-lg font-semibold text-foreground">Customer Growth</h3>
+          <p className="text-sm text-muted-foreground">Total customers over time</p>
+        </div>
+        <Button variant="outline" size="sm" className="gap-2" onClick={handleAddCustomer}>
+          <UserPlus className="w-4 h-4" />
+          Add Customer
+        </Button>
       </div>
-      <div className="h-[300px]">
+      <div className="h-[260px]">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={data}>
             <defs>
@@ -61,7 +77,10 @@ export function CustomerGrowthChart() {
                 boxShadow: "var(--shadow-elevated)",
               }}
               labelStyle={{ color: "hsl(var(--foreground))" }}
-              formatter={(value: number) => [`${value} customers`, ""]}
+              formatter={(value: number, name: string) => [
+                `${value}`,
+                name === "customers" ? "Total Customers" : "New Signups",
+              ]}
             />
             <Area
               type="monotone"
@@ -72,6 +91,21 @@ export function CustomerGrowthChart() {
             />
           </AreaChart>
         </ResponsiveContainer>
+      </div>
+      {/* Quick Stats */}
+      <div className="mt-4 grid grid-cols-3 gap-4 pt-4 border-t border-border">
+        <div className="text-center">
+          <p className="text-2xl font-bold text-foreground">1,161</p>
+          <p className="text-xs text-muted-foreground">Total Customers</p>
+        </div>
+        <div className="text-center">
+          <p className="text-2xl font-bold text-success">+178</p>
+          <p className="text-xs text-muted-foreground">This Month</p>
+        </div>
+        <div className="text-center">
+          <p className="text-2xl font-bold text-info">15.3%</p>
+          <p className="text-xs text-muted-foreground">Growth Rate</p>
+        </div>
       </div>
     </div>
   );

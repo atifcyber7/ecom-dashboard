@@ -35,14 +35,14 @@ export function Sidebar() {
       <div className="flex items-center h-16 px-4 border-b border-sidebar-border">
         <div className="flex items-center gap-3 overflow-hidden">
           <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
-            <span className="text-primary-foreground font-bold text-lg">R</span>
+            <span className="text-primary-foreground font-bold text-lg">B</span>
           </div>
           {!collapsed && (
             <div className="animate-fade-in">
-              <h1 className="font-semibold text-foreground text-sm leading-tight truncate">
-                REPLACE_WITH_YOUR
+              <h1 className="font-semibold text-foreground text-base leading-tight truncate">
+                Bluetick
               </h1>
-              <p className="text-xs text-muted-foreground">_COMPANY_NAME</p>
+              <p className="text-xs text-muted-foreground">E-Commerce CRM</p>
             </div>
           )}
         </div>

@@ -8,6 +8,9 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts";
+import { Button } from "@/components/ui/button";
+import { Download, Maximize2 } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 
 const data = [
   { name: "Jan", daily: 4200, monthly: 24000 },
@@ -25,11 +28,35 @@ const data = [
 ];
 
 export function SalesChart() {
+  const handleExport = () => {
+    toast({
+      title: "Export Started",
+      description: "Sales report is being generated...",
+    });
+  };
+
+  const handleExpand = () => {
+    toast({
+      title: "Fullscreen Mode",
+      description: "Opening chart in fullscreen...",
+    });
+  };
+
   return (
     <div className="bg-card rounded-xl p-6 shadow-card border border-border/50 animate-fade-in">
-      <div className="mb-6">
-        <h3 className="text-lg font-semibold text-foreground">Sales Overview</h3>
-        <p className="text-sm text-muted-foreground">Daily & Monthly Sales Trend</p>
+      <div className="mb-6 flex items-start justify-between">
+        <div>
+          <h3 className="text-lg font-semibold text-foreground">Sales Overview</h3>
+          <p className="text-sm text-muted-foreground">Daily & Monthly Sales Trend</p>
+        </div>
+        <div className="flex gap-2">
+          <Button variant="ghost" size="icon" className="h-8 w-8" onClick={handleExport}>
+            <Download className="w-4 h-4" />
+          </Button>
+          <Button variant="ghost" size="icon" className="h-8 w-8" onClick={handleExpand}>
+            <Maximize2 className="w-4 h-4" />
+          </Button>
+        </div>
       </div>
       <div className="h-[300px]">
         <ResponsiveContainer width="100%" height="100%">

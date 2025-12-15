@@ -19,6 +19,7 @@ const Index = () => {
           changeType="positive"
           icon={DollarSign}
           iconColor="primary"
+          actionLabel="View sales report"
         />
         <KPICard
           title="Monthly Revenue"
@@ -27,6 +28,7 @@ const Index = () => {
           changeType="positive"
           icon={TrendingUp}
           iconColor="success"
+          actionLabel="View revenue"
         />
         <KPICard
           title="Pending Orders"
@@ -35,6 +37,7 @@ const Index = () => {
           changeType="neutral"
           icon={ShoppingBag}
           iconColor="warning"
+          actionLabel="Manage orders"
         />
         <KPICard
           title="New Customers"
@@ -43,6 +46,7 @@ const Index = () => {
           changeType="positive"
           icon={Users}
           iconColor="info"
+          actionLabel="View customers"
         />
       </div>
 
