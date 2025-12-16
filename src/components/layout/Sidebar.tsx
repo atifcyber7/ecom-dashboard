@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import bluetickLogo from "@/assets/bluetick-logo.png";
 
 const navItems = [
   { title: "Dashboard", icon: LayoutDashboard, path: "/" },
@@ -31,11 +32,14 @@ export function Sidebar() {
         collapsed ? "w-[72px]" : "w-[260px]"
       )}
     >
-      {/* Logo/Company Section */}
       <div className="flex items-center h-16 px-4 border-b border-sidebar-border">
         <div className="flex items-center gap-3 overflow-hidden">
-          <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
-            <span className="text-primary-foreground font-bold text-lg">B</span>
+          <div className="w-10 h-10 rounded-full bg-background flex items-center justify-center flex-shrink-0 overflow-hidden shadow-sm border border-border">
+            <img 
+              src={bluetickLogo} 
+              alt="Bluetick Logo" 
+              className="w-8 h-8 object-contain"
+            />
           </div>
           {!collapsed && (
             <div className="animate-fade-in">
