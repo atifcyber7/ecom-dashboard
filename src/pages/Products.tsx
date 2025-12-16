@@ -43,14 +43,14 @@ const categoryData = [
 ];
 
 const products = [
-  { id: 1, name: "iPhone 15 Pro Max", sku: "APL-IP15PM", category: "Electronics", price: "₹1,59,900", stock: 45, status: "In Stock", sales: 245 },
-  { id: 2, name: "MacBook Air M2", sku: "APL-MBA-M2", category: "Electronics", price: "₹1,14,900", stock: 28, status: "In Stock", sales: 189 },
-  { id: 3, name: "AirPods Pro 2", sku: "APL-APP2", category: "Audio", price: "₹24,900", stock: 5, status: "Low Stock", sales: 312 },
-  { id: 4, name: "iPad Pro 12.9", sku: "APL-IPDP", category: "Electronics", price: "₹1,12,900", stock: 18, status: "In Stock", sales: 156 },
-  { id: 5, name: "Apple Watch Ultra 2", sku: "APL-AWU2", category: "Wearables", price: "₹89,900", stock: 0, status: "Out of Stock", sales: 198 },
-  { id: 6, name: "Samsung S24 Ultra", sku: "SAM-S24U", category: "Electronics", price: "₹1,34,999", stock: 32, status: "In Stock", sales: 167 },
-  { id: 7, name: "Sony WH-1000XM5", sku: "SNY-WH5", category: "Audio", price: "₹29,990", stock: 3, status: "Low Stock", sales: 145 },
-  { id: 8, name: "Dell XPS 15", sku: "DEL-XPS15", category: "Electronics", price: "₹1,89,990", stock: 12, status: "In Stock", sales: 89 },
+  { id: 1, name: "iPhone 15 Pro Max", sku: "APL-IP15PM", category: "Electronics", price: "$1,599", stock: 45, status: "In Stock", sales: 245 },
+  { id: 2, name: "MacBook Air M2", sku: "APL-MBA-M2", category: "Electronics", price: "$1,149", stock: 28, status: "In Stock", sales: 189 },
+  { id: 3, name: "AirPods Pro 2", sku: "APL-APP2", category: "Audio", price: "$249", stock: 5, status: "Low Stock", sales: 312 },
+  { id: 4, name: "iPad Pro 12.9", sku: "APL-IPDP", category: "Electronics", price: "$1,129", stock: 18, status: "In Stock", sales: 156 },
+  { id: 5, name: "Apple Watch Ultra 2", sku: "APL-AWU2", category: "Wearables", price: "$899", stock: 0, status: "Out of Stock", sales: 198 },
+  { id: 6, name: "Samsung S24 Ultra", sku: "SAM-S24U", category: "Electronics", price: "$1,349", stock: 32, status: "In Stock", sales: 167 },
+  { id: 7, name: "Sony WH-1000XM5", sku: "SNY-WH5", category: "Audio", price: "$299", stock: 3, status: "Low Stock", sales: 145 },
+  { id: 8, name: "Dell XPS 15", sku: "DEL-XPS15", category: "Electronics", price: "$1,899", stock: 12, status: "In Stock", sales: 89 },
 ];
 
 const getStatusColor = (status: string) => {
