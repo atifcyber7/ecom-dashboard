@@ -45,14 +45,14 @@ const weeklyOrders = [
 ];
 
 const orders = [
-  { id: "ORD-001", customer: "Rahul Sharma", email: "rahul@email.com", product: "iPhone 15 Pro", amount: "₹1,29,900", status: "Delivered", date: "2024-01-15" },
-  { id: "ORD-002", customer: "Priya Patel", email: "priya@email.com", product: "MacBook Air M2", amount: "₹1,14,900", status: "Shipped", date: "2024-01-14" },
-  { id: "ORD-003", customer: "Amit Kumar", email: "amit@email.com", product: "AirPods Pro", amount: "₹24,900", status: "Pending", date: "2024-01-14" },
-  { id: "ORD-004", customer: "Sneha Reddy", email: "sneha@email.com", product: "iPad Pro 12.9", amount: "₹1,12,900", status: "Processing", date: "2024-01-13" },
-  { id: "ORD-005", customer: "Vikram Singh", email: "vikram@email.com", product: "Apple Watch Ultra", amount: "₹89,900", status: "Delivered", date: "2024-01-13" },
-  { id: "ORD-006", customer: "Ananya Gupta", email: "ananya@email.com", product: "Samsung S24 Ultra", amount: "₹1,34,999", status: "Shipped", date: "2024-01-12" },
-  { id: "ORD-007", customer: "Karthik Nair", email: "karthik@email.com", product: "Sony WH-1000XM5", amount: "₹29,990", status: "Pending", date: "2024-01-12" },
-  { id: "ORD-008", customer: "Meera Iyer", email: "meera@email.com", product: "Dell XPS 15", amount: "₹1,89,990", status: "Delivered", date: "2024-01-11" },
+  { id: "ORD-001", customer: "Rahul Sharma", email: "rahul@email.com", product: "iPhone 15 Pro", amount: "$1,299", status: "Delivered", date: "2024-01-15" },
+  { id: "ORD-002", customer: "Priya Patel", email: "priya@email.com", product: "MacBook Air M2", amount: "$1,149", status: "Shipped", date: "2024-01-14" },
+  { id: "ORD-003", customer: "Amit Kumar", email: "amit@email.com", product: "AirPods Pro", amount: "$249", status: "Pending", date: "2024-01-14" },
+  { id: "ORD-004", customer: "Sneha Reddy", email: "sneha@email.com", product: "iPad Pro 12.9", amount: "$1,129", status: "Processing", date: "2024-01-13" },
+  { id: "ORD-005", customer: "Vikram Singh", email: "vikram@email.com", product: "Apple Watch Ultra", amount: "$899", status: "Delivered", date: "2024-01-13" },
+  { id: "ORD-006", customer: "Ananya Gupta", email: "ananya@email.com", product: "Samsung S24 Ultra", amount: "$1,349", status: "Shipped", date: "2024-01-12" },
+  { id: "ORD-007", customer: "Karthik Nair", email: "karthik@email.com", product: "Sony WH-1000XM5", amount: "$299", status: "Pending", date: "2024-01-12" },
+  { id: "ORD-008", customer: "Meera Iyer", email: "meera@email.com", product: "Dell XPS 15", amount: "$1,899", status: "Delivered", date: "2024-01-11" },
 ];
 
 const getStatusColor = (status: string) => {
@@ -150,7 +150,7 @@ export default function Orders() {
                       border: '1px solid hsl(var(--border))',
                       borderRadius: '8px'
                     }}
-                    formatter={(value) => [`₹${value.toLocaleString()}`, 'Revenue']}
+                    formatter={(value) => [`$${value.toLocaleString()}`, 'Revenue']}
                   />
                   <Line type="monotone" dataKey="revenue" stroke="hsl(var(--primary))" strokeWidth={2} dot={{ fill: 'hsl(var(--primary))' }} />
                 </LineChart>

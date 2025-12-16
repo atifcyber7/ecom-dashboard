@@ -12,10 +12,10 @@ import { BarChart3, TrendingUp, TrendingDown, DollarSign, ShoppingCart, Users, P
 import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, Legend, PieChart, Pie, Cell, ComposedChart } from "recharts";
 
 const reportStats = [
-  { title: "Total Revenue", value: "₹45,28,900", icon: DollarSign, change: "+18%", trend: "up", color: "text-primary" },
+  { title: "Total Revenue", value: "$452,890", icon: DollarSign, change: "+18%", trend: "up", color: "text-primary" },
   { title: "Total Orders", value: "1,284", icon: ShoppingCart, change: "+12%", trend: "up", color: "text-blue-600" },
   { title: "New Customers", value: "324", icon: Users, change: "+22%", trend: "up", color: "text-green-600" },
-  { title: "Avg Order Value", value: "₹3,528", icon: Package, change: "-5%", trend: "down", color: "text-yellow-600" },
+  { title: "Avg Order Value", value: "$352", icon: Package, change: "-5%", trend: "down", color: "text-yellow-600" },
 ];
 
 const monthlyRevenue = [
@@ -124,7 +124,7 @@ export default function Reports() {
                 <YAxis 
                   yAxisId="left"
                   tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }} 
-                  tickFormatter={(value) => `₹${(value / 100000).toFixed(0)}L`}
+                  tickFormatter={(value) => `$${(value / 1000).toFixed(0)}K`}
                 />
                 <YAxis 
                   yAxisId="right"
@@ -139,7 +139,7 @@ export default function Reports() {
                   }}
                   formatter={(value: number, name: string) => {
                     if (name === 'orders') return [value, 'Orders'];
-                    return [`₹${(value / 100000).toFixed(2)}L`, name === 'revenue' ? 'Revenue' : 'Profit'];
+                    return [`$${(value / 1000).toFixed(0)}K`, name === 'revenue' ? 'Revenue' : 'Profit'];
                   }}
                 />
                 <Legend />
@@ -268,7 +268,7 @@ export default function Reports() {
                         <span className="text-sm font-medium">{category.category}</span>
                       </div>
                       <div className="text-right">
-                        <p className="text-sm font-bold">₹{(category.revenue / 100000).toFixed(1)}L</p>
+                        <p className="text-sm font-bold">${(category.revenue / 1000).toFixed(0)}K</p>
                         <p className="text-xs text-muted-foreground">{category.orders} orders</p>
                       </div>
                     </div>

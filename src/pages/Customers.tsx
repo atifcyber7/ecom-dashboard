@@ -45,14 +45,14 @@ const customerSegments = [
 ];
 
 const customers = [
-  { id: 1, name: "Rahul Sharma", email: "rahul@email.com", phone: "+91 98765 43210", orders: 24, spent: "₹4,52,300", status: "Premium", joined: "2023-03-15" },
-  { id: 2, name: "Priya Patel", email: "priya@email.com", phone: "+91 87654 32109", orders: 18, spent: "₹2,89,500", status: "Premium", joined: "2023-05-22" },
-  { id: 3, name: "Amit Kumar", email: "amit@email.com", phone: "+91 76543 21098", orders: 12, spent: "₹1,45,800", status: "Regular", joined: "2023-07-10" },
-  { id: 4, name: "Sneha Reddy", email: "sneha@email.com", phone: "+91 65432 10987", orders: 8, spent: "₹89,200", status: "Regular", joined: "2023-09-05" },
-  { id: 5, name: "Vikram Singh", email: "vikram@email.com", phone: "+91 54321 09876", orders: 3, spent: "₹45,600", status: "New", joined: "2024-01-02" },
-  { id: 6, name: "Ananya Gupta", email: "ananya@email.com", phone: "+91 43210 98765", orders: 15, spent: "₹2,12,400", status: "Regular", joined: "2023-06-18" },
-  { id: 7, name: "Karthik Nair", email: "karthik@email.com", phone: "+91 32109 87654", orders: 2, spent: "₹28,900", status: "New", joined: "2024-01-08" },
-  { id: 8, name: "Meera Iyer", email: "meera@email.com", phone: "+91 21098 76543", orders: 0, spent: "₹0", status: "Inactive", joined: "2023-04-20" },
+  { id: 1, name: "Rahul Sharma", email: "rahul@email.com", phone: "+1 987-654-3210", orders: 24, spent: "$45,230", status: "Premium", joined: "2023-03-15" },
+  { id: 2, name: "Priya Patel", email: "priya@email.com", phone: "+1 876-543-2109", orders: 18, spent: "$28,950", status: "Premium", joined: "2023-05-22" },
+  { id: 3, name: "Amit Kumar", email: "amit@email.com", phone: "+1 765-432-1098", orders: 12, spent: "$14,580", status: "Regular", joined: "2023-07-10" },
+  { id: 4, name: "Sneha Reddy", email: "sneha@email.com", phone: "+1 654-321-0987", orders: 8, spent: "$8,920", status: "Regular", joined: "2023-09-05" },
+  { id: 5, name: "Vikram Singh", email: "vikram@email.com", phone: "+1 543-210-9876", orders: 3, spent: "$4,560", status: "New", joined: "2024-01-02" },
+  { id: 6, name: "Ananya Gupta", email: "ananya@email.com", phone: "+1 432-109-8765", orders: 15, spent: "$21,240", status: "Regular", joined: "2023-06-18" },
+  { id: 7, name: "Karthik Nair", email: "karthik@email.com", phone: "+1 321-098-7654", orders: 2, spent: "$2,890", status: "New", joined: "2024-01-08" },
+  { id: 8, name: "Meera Iyer", email: "meera@email.com", phone: "+1 210-987-6543", orders: 0, spent: "$0", status: "Inactive", joined: "2023-04-20" },
 ];
 
 const getStatusColor = (status: string) => {
